@@ -50,6 +50,7 @@ describe 'Rest API YAML tests' do
           end
 
           before(:all) { test_file.setup }
+
           after(:all) do
             test_file.teardown
             Elasticsearch::RestAPIYAMLTests::WipeCluster.run(ADMIN_CLIENT)
